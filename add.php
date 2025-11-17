@@ -14,7 +14,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->bind_param("ssssss", $name, $email, $university, $internship_role, $start_date, $end_date);
 
     if ($stmt->execute()) {
-        // Redirect to index.php after successful insertion
         header("Location: index.php");
         exit();
     } else {
